@@ -89,11 +89,11 @@ if "DATABASES_URL" in os.environ:
     }
 
 else:
-    print ("No Postgres DB found")
+    print("No Postgres DB found, using sqlite instead")
     DATABASES = {
         'default':{
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, ' db.sqlite3'),
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
 
