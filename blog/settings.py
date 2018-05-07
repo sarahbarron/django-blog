@@ -31,7 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'django-blog-sarahbarron.c9users.io', 
-    'blog-test-app.herokuapp.com'
+    'blog-test-app1.herokuapp.com'
     ]
 
 
@@ -56,7 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware'
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'blog.urls'
@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 
 # Database
 
-if "DATABASES_URL" in os.environ:
+if "DATABASE_URL" in os.environ:
     DATABASES = {
       'default' : dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
